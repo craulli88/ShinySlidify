@@ -1,0 +1,56 @@
+---
+title       : Shiny Application
+subtitle    : Slidify Presentation
+author      : Chris Raulli
+job         : Coursera - Developing Data Products
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Pitch Intro
+
+The purpose of this slide presentation is to pitch my shiny app which I have created.  The app itself is described in the
+following slides.
+
+--- .class #id 
+
+## Overview of server.R
+
+This file defines the server logic.  It takes the value that was input by the user and calculates a pace value which is print into the html table.
+
+I have attached some code below to show an example calculation:
+
+```{r}
+    time <- (3*3600)+(20*60)+(7)
+    dist <- 26.2
+    pace <- (time/dist)/60
+    floor <- floor(pace)
+    dec <- pace-floor
+    sec <- floor(dec*60)
+    paste <- paste(floor, ":", sec)
+    print(paste)
+```
+
+--- .class #id 
+
+## Overview of ui.R
+
+This file creates the logic and user interface for the input box and sliders for the user to give their desired values.  The vaues are then passed to the server.R file explained in the previous slide.
+
+--- .class #id 
+
+## Conclusion
+
+This is a great application becsause it can quickly show you a pace you have run, biked etc.  It is clean and simplictic.  All of the calculations are accurate and tested.
+
+Thanks for ckecking out my slide presentation, and I hope you liked my app :-)
+
+--- .class #id 
+
+
+
+
